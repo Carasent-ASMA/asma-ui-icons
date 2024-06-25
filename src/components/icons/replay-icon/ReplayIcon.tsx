@@ -1,16 +1,13 @@
 import React from 'react'
-import type { IIcon } from '../Icons.types'
-import { IconTemplate } from '../IconTemplate'
+import type { SVGProps } from 'react'
 
-export const ReplayIcon: React.FC<IIcon> = ({ width = 20, height = 20, className = '', onClick, color }) => {
+export function ReplayIcon(props: SVGProps<SVGSVGElement>) {
     return (
-        <IconTemplate
-            icon='mdi:replay'
-            width={width}
-            height={height}
-            className={className}
-            onClick={onClick}
-            color={color}
-        />
+        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24' {...props}>
+            <path
+                fill='currentColor'
+                d='M12 5V1L7 6l5 5V7a6 6 0 0 1 6 6a6 6 0 0 1-6 6a6 6 0 0 1-6-6H4a8 8 0 0 0 8 8a8 8 0 0 0 8-8a8 8 0 0 0-8-8'
+            ></path>
+        </svg>
     )
 }

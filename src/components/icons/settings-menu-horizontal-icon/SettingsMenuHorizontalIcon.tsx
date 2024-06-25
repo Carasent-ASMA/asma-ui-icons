@@ -1,22 +1,16 @@
 import React from 'react'
-import type { IIcon } from '../Icons.types'
-import { IconTemplate } from '../IconTemplate'
+import type { SVGProps } from 'react'
 
-export const SettingsMenuHorizontalIcon: React.FC<IIcon> = ({
-    width = 20,
-    height = 20,
-    className = '',
-    onClick,
-    color,
-}) => {
+export function SettingsMenuHorizontalIcon(props: SVGProps<SVGSVGElement>) {
     return (
-        <IconTemplate
-            icon='streamline:interface-setting-menu-1-button-parallel-horizontal-lines-menu-navigation-three-hamburger'
-            width={width}
-            height={height}
-            className={className}
-            onClick={onClick}
-            color={color}
-        />
+        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 14 14' {...props}>
+            <path
+                fill='none'
+                stroke='currentColor'
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                d='M13.5 2H.5m13 5H.5m13 5H.5'
+            ></path>
+        </svg>
     )
 }

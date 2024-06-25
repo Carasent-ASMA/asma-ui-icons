@@ -1,15 +1,13 @@
-import type { IIcon } from '../Icons.types'
-import { IconTemplate } from '../IconTemplate'
+import React from 'react'
+import type { SVGProps } from 'react'
 
-export const InboxOutboxOutlineIcon: React.FC<IIcon> = ({ width = 20, height = 20, className = '', onClick, color }) => {
+export function InboxOutboxOutlineIcon(props: SVGProps<SVGSVGElement>) {
     return (
-        <IconTemplate
-            icon='mdi:inbox-outline'
-            width={width}
-            height={height}
-            className={className}
-            onClick={onClick}
-            color={color}
-        />
+        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24' {...props}>
+            <path
+                fill='currentColor'
+                d='M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2M5 19v-2h3.13a4.13 4.13 0 0 0 1.27 2m9.6 0h-4.4a4.13 4.13 0 0 0 1.27-2H19m0-2h-5v1a2 2 0 0 1-4 0v-1H5V5h14Z'
+            ></path>
+        </svg>
     )
 }

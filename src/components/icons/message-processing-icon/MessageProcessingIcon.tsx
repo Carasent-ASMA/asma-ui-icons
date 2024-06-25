@@ -1,15 +1,13 @@
-import type { IIcon } from '../Icons.types'
-import { IconTemplate } from '../IconTemplate'
+import React from 'react'
+import type { SVGProps } from 'react'
 
-export const MessageProcessingIcon: React.FC<IIcon> = ({ width = 20, height = 20, className = '', onClick, color }) => {
+export function MessageProcessingIcon(props: SVGProps<SVGSVGElement>) {
     return (
-        <IconTemplate
-            icon='mdi:message-processing'
-            width={width}
-            height={height}
-            className={className}
-            onClick={onClick}
-            color={color}
-        />
+        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24' {...props}>
+            <path
+                fill='currentColor'
+                d='M17 11h-2V9h2m-4 2h-2V9h2m-4 2H7V9h2m11-7H4a2 2 0 0 0-2 2v18l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2'
+            ></path>
+        </svg>
     )
 }

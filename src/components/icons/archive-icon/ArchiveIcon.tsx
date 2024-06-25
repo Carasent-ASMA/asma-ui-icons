@@ -1,15 +1,13 @@
-import type { IIcon } from '../Icons.types'
-import { IconTemplate } from '../IconTemplate'
+import React from 'react'
+import type { SVGProps } from 'react'
 
-export const ArchiveIcon: React.FC<IIcon> = ({ width = 20, height = 20, className = '', onClick, color }) => {
+export function ArchiveIcon(props: SVGProps<SVGSVGElement>) {
     return (
-        <IconTemplate
-            icon='eva:archive-fill'
-            width={width}
-            height={height}
-            className={className}
-            onClick={onClick}
-            color={color}
-        />
+        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24' {...props}>
+            <path
+                fill='currentColor'
+                d='M18 3H6a3 3 0 0 0-2 5.22V18a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8.22A3 3 0 0 0 18 3m-3 10.13a.87.87 0 0 1-.87.87H9.87a.87.87 0 0 1-.87-.87v-.26a.87.87 0 0 1 .87-.87h4.26a.87.87 0 0 1 .87.87ZM18 7H6a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2'
+            ></path>
+        </svg>
     )
 }

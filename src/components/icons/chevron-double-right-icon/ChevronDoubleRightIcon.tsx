@@ -1,21 +1,13 @@
-import type { IIcon } from '../Icons.types'
-import { IconTemplate } from '../IconTemplate'
+import React from 'react'
+import type { SVGProps } from 'react'
 
-export const ChevronDoubleRightIcon: React.FC<IIcon> = ({
-    width = 20,
-    height = 20,
-    className = '',
-    onClick,
-    color,
-}) => {
+export function ChevronDoubleRightIcon(props: SVGProps<SVGSVGElement>) {
     return (
-        <IconTemplate
-            icon='mdi:chevron-double-right'
-            width={width}
-            height={height}
-            className={className}
-            onClick={onClick}
-            color={color}
-        />
+        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24' {...props}>
+            <path
+                fill='currentColor'
+                d='M5.59 7.41L7 6l6 6l-6 6l-1.41-1.41L10.17 12zm6 0L13 6l6 6l-6 6l-1.41-1.41L16.17 12z'
+            ></path>
+        </svg>
     )
 }

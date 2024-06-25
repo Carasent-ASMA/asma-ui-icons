@@ -1,15 +1,10 @@
-import type { IIcon } from '../Icons.types'
-import { IconTemplate } from '../IconTemplate'
+import React from 'react'
+import type { SVGProps } from 'react'
 
-export const CheckIcon: React.FC<IIcon> = ({ width = 20, height = 20, className = '', onClick, color }) => {
+export function CheckIcon(props: SVGProps<SVGSVGElement>) {
     return (
-        <IconTemplate
-            icon='ic:baseline-check'
-            width={width}
-            height={height}
-            className={className}
-            onClick={onClick}
-            color={color}
-        />
+        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24' {...props}>
+            <path fill='currentColor' d='M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z'></path>
+        </svg>
     )
 }

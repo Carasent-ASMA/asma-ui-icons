@@ -1,4 +1,3 @@
-export * from './Icons.types'
 export * from './bell-outline-icon'
 export * from './bell-icon'
 export * from './hamburger-icon'
