@@ -3,12 +3,10 @@
     "publishConfig": {
         "access": "public"
     },
-    "version": "0.0.2",
+    "version": "0.0.3",
     "type": "module",
     "files": [
-        "dist/**/*",
-        "dist/style.css",
-        "tw-configs/**/*"
+        "dist/**/*"
     ],
     "keywords": [],
     "author": "asma-team",
@@ -103,8 +101,6 @@
     "exports": {
         ".": {
             "import": "./dist/asma-ui-icons.es.js"
-        },
-        "./dist/style.css": "./dist/style.css",
-        "./tw-configs/twConfigs.json": "./tw-configs/twConfigs.json"
+        }
     }
 }
