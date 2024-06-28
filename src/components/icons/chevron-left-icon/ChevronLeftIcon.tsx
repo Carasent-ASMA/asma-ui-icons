@@ -1,4 +1,3 @@
-import React from 'react'
 import type { SVGProps } from 'react'
 
 export function ChevronLeftIcon(props: SVGProps<SVGSVGElement>) {

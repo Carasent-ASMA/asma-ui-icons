@@ -1,4 +1,3 @@
-import React from 'react'
 import type { SVGProps } from 'react'
 
 export function ClockOutlineIcon(props: SVGProps<SVGSVGElement>) {

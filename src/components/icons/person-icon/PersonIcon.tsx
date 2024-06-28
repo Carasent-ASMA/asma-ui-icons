@@ -1,4 +1,3 @@
-import React from 'react'
 import type { SVGProps } from 'react'
 
 export function PersonIcon(props: SVGProps<SVGSVGElement>) {
