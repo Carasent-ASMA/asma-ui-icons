@@ -83,6 +83,7 @@ import { PlusIcon } from '../components/icons/plus-icon'
 import { HandymanIcon } from '../components/icons/handyman-icon'
 import { OutlineCalendarMonth } from '../components/icons/outline-calendar-month'
 import { LocationIcon } from 'src/components/icons/location-icon'
+import { FormIcon } from 'src/components/icons'
 
 export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ height = 24, width = 24 }) => {
     return (
@@ -351,6 +352,10 @@ export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ hei
 
             <div title='LocationIcon'>
                 <LocationIcon height={height} width={height} />
+            </div>
+
+            <div title='FormIcon'>
+                <FormIcon height={height} width={height} />
             </div>
         </div>
     )
