@@ -22,5 +22,4 @@ export default {
             colors,
         },
     },
-    plugins: [require('tailwind-scrollbar')],
 }
