@@ -85,7 +85,7 @@ import { OutlineCalendarMonth } from '../components/icons/outline-calendar-month
 import { LocationIcon } from 'src/components/icons/location-icon'
 import { FormIcon } from 'src/components/icons/form-icon'
 import { RepeatOutlineIcon } from 'src/components/icons/repeat-outline-icon'
-import { MicrosoftOutlookIcon, TodayIcon } from 'src/components/icons'
+import { LoginIcon, LogoutIcon, MicrosoftOutlookIcon, TodayIcon } from 'src/components/icons'
 
 export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ height = 24, width = 24 }) => {
     return (
@@ -370,6 +370,14 @@ export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ hei
 
             <div title='MicrosoftOutlookIcon'>
                 <MicrosoftOutlookIcon height={height} width={height} />
+            </div>
+
+            <div title='LoginIcon'>
+                <LoginIcon height={height} width={height} />
+            </div>
+
+            <div title='LogoutIcon'>
+                <LogoutIcon height={height} width={height} />
             </div>
         </div>
     )
