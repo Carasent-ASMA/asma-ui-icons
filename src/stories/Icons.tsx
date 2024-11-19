@@ -87,6 +87,7 @@ import { FormIcon } from 'src/components/icons/form-icon'
 import { RepeatOutlineIcon } from 'src/components/icons/repeat-outline-icon'
 import { LoginIcon, LogoutIcon, MicrosoftOutlookIcon, TimerIcon, TodayIcon } from 'src/components/icons'
 import { BackIcon } from 'src/components/icons'
+import { HelpIcon } from 'src/components/icons/help-icon'
 
 export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ height = 24, width = 24 }) => {
     return (
@@ -387,6 +388,10 @@ export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ hei
 
             <div title='BackIcon'>
                 <BackIcon height={height} width={height} />
+            </div>
+
+            <div title='HelpIcon'>
+                <HelpIcon height={height} width={height} />
             </div>
         </div>
     )
