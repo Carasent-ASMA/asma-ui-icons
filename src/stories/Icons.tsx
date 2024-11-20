@@ -89,6 +89,7 @@ import { LoginIcon, LogoutIcon, MicrosoftOutlookIcon, TimerIcon, TodayIcon } fro
 import { BackIcon } from 'src/components/icons'
 import { HelpIcon } from 'src/components/icons/help-icon'
 import { NewWindowIcon } from 'src/components/icons/new-window-icon'
+import { DoneAllIcon } from 'src/components/icons/done-all-icon'
 
 export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ height = 24, width = 24 }) => {
     return (
@@ -396,6 +397,9 @@ export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ hei
             </div>
             <div title='NewWindowIcon'>
                 <NewWindowIcon height={height} width={height} />
+            </div>
+            <div title='DoneAllIcon'>
+                <DoneAllIcon height={height} width={height} />
             </div>
         </div>
     )
