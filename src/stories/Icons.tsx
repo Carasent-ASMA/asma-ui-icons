@@ -1,3 +1,10 @@
+import React, { useState } from 'react'
+import Tippy from '@tippyjs/react'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import toast, { Toaster } from 'react-hot-toast'
+import './tippy.css'
+import styles from './Icons.module.scss'
+
 import { HamburgerIcon } from '../components/icons/hamburger-icon'
 import { BellIcon } from '../components/icons/bell-icon'
 import { PdfIcon } from '../components/icons/pdf-icon'
@@ -45,7 +52,6 @@ import { FindReplacePeopleIcon } from '../components/icons/find-replace-people-i
 import { CalendarBlankOutlineIcon } from '../components/icons/calendar-blank-outline-icon'
 import { ClockOutlineIcon } from '../components/icons/clock-outline-icon'
 
-import styles from './Icons.module.scss'
 import { InboxOutboxIcon } from '../components/icons/inbox-outbox-icon'
 import { InboxOutboxOutlineIcon } from '../components/icons/inbox-outbox-outline-icon'
 import { TopicIcon } from '../components/icons/topic-icon'
@@ -87,323 +93,38 @@ import { FormIcon } from 'src/components/icons/form-icon'
 import { RepeatOutlineIcon } from 'src/components/icons/repeat-outline-icon'
 import { LoginIcon, LogoutIcon, MicrosoftOutlookIcon, TimerIcon, TodayIcon } from 'src/components/icons'
 import { BackIcon } from 'src/components/icons'
-import { HelpIcon } from 'src/components/icons/help-icon'
+import { useIconsList } from './useIconsList'
 import { NewWindowIcon } from 'src/components/icons/new-window-icon'
 import { DoneAllIcon } from 'src/components/icons/done-all-icon'
 import { UnlockIcon } from 'src/components/icons/unlock-icon'
 
-export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ height = 24, width = 24 }) => {
+export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ height = 28, width = 28 }) => {
+    const [filterText, setFilterText] = useState('')
+    const { icons } = useIconsList({ filterText, height, width })
+
     return (
-        <div className={styles['all-icons-container']}>
-            <div title='LoadingIcon'>
-                <LoadingIcon height={height} width={height} />
-            </div>
-            <div title='DownloadIcon'>
-                <DownloadIcon height={height} width={height} />
-            </div>
-            <div title='ArchiveIcon'>
-                <ArchiveIcon height={height} width={height} />
-            </div>
-            <div title='DotsVertical'>
-                <DotsVerticalIcon height={height} width={height} />
-            </div>
-            <div title='FindReplaceIcon'>
-                <FindReplaceIcon height={height} width={height} />
-            </div>
-            <div title='FindReplacePeopleIcon' className='cursor-pointer'>
-                <FindReplacePeopleIcon className='w-[33px] h-[33px]' />
-            </div>
-            <div title='Search'>
-                <SearchIcon height={height} width={height} />
-            </div>
-            <div title='SettingsOutlineIcon'>
-                <SettingsOutlineIcon height={height} width={height} />
-            </div>
-            <div title='SettingsIcon'>
-                <SettingsIcon height={height} width={height} />
-            </div>
-            <div title='ReportboxOutlineIcon'>
-                <ReportBoxOutlineIcon height={height} width={height} />
-            </div>
-            <div title='ReportboxIcon'>
-                <ReportBoxIcon height={height} width={height} />
-            </div>
-            <div title='BellOutlineIcon'>
-                <BellOutlineIcon height={height} width={width} />
-            </div>
-            <div title='BellIcon'>
-                <BellIcon height={height} width={width} />
-            </div>
-            <div title='HamburgerIcon'>
-                <HamburgerIcon height={height} width={width} />
-            </div>
-            <div title='PdfIcon'>
-                <PdfIcon color={'red'} height={height} width={width} />
-            </div>
-            <div title='QnrIcon'>
-                <QnrIcon color={'#1890ff'} height={height} width={width} />
-            </div>
-            <div title='DropUpIcon'>
-                <DropUpIcon height={height} width={width} />
-            </div>
-            <div title='DropDownIcon'>
-                <DropDownIcon height={height} width={width} />
-            </div>
-            <div title='ChevronDownIcon'>
-                <ChevronDownIcon height={height} width={width} />
-            </div>
-            <div title='ChevronUpIcon'>
-                <ChevronUpIcon height={height} width={width} />
-            </div>
-            <div title='ChevronLeftIcon'>
-                <ChevronLeftIcon height={height} width={width} />
-            </div>
-            <div title='ChevronRightIcon'>
-                <ChevronRightIcon height={height} width={width} />
-            </div>
-            <div title='ChevronDoubleRightIcon'>
-                <ChevronDoubleRightIcon height={height} width={width} />
-            </div>
-            <div title='ChevronDoubleLeftIcon'>
-                <ChevronDoubleLeftIcon height={height} width={width} />
-            </div>
-            <div title='DashboardViewOutlineIcon'>
-                <DashboardViewOutlineIcon height={height} width={width} />
-            </div>
-            <div title='DashboardViewIcon'>
-                <DashboardViewIcon height={height} width={width} />
-            </div>
-            <div title='PersonIcon'>
-                <PersonIcon height={height} width={width} />
-            </div>
-            <div title='PersonOutlineIcon'>
-                <PersonOutlineIcon height={height} width={width} />
-            </div>
-            <div title='PeopleOutlineIcon'>
-                <PeopleOutlineIcon height={height} width={width} />
-            </div>
-            <div title='PeopleIcon'>
-                <PeopleIcon height={height} width={width} />
-            </div>
-            <div title='CloseIcon'>
-                <CloseIcon height={height} width={width} />
-            </div>
-            <div title='CheckIcon'>
-                <CheckIcon height={height} width={width} color='green' />
-            </div>
-            <div title='CheckBoxCheckedIcon'>
-                <CheckBoxCheckedIcon height={height} width={width} color='green' />
-            </div>
+        <div>
+            <input
+                type='text'
+                placeholder='Filter icons'
+                className='w-full mb-2 max-w-md duration-300 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                onChange={(e) => setFilterText(e.target.value)}
+            />
+            <div className={styles['all-icons-container']}>
+                <Toaster />
 
-            <div>
-                <CheckOutlineIcon height={height} width={width} color='green' />
-            </div>
-
-            <div title='CheckFactOutlineIcon'>
-                <CheckFactOutlineIcon height={height} width={height} color='green' />
-            </div>
-
-            <div title='CheckFactIcon'>
-                <CheckFactIcon height={height} width={height} color='green' />
-            </div>
-
-            <div title='CalendarIcon'>
-                <CalendarIcon height={height} width={width} />
-            </div>
-            <div title='CalendarRangeIcon'>
-                <CalendarRangeIcon height={height} width={width} />
-            </div>
-            <div title='OutlineCalendarMonth'>
-                <OutlineCalendarMonth height={height} width={width} />
-            </div>
-            <div title='AssignmentOutlineIcon'>
-                <AssignmentOutlineIcon height={height} width={width} />
-            </div>
-            <div title='AssignmentIcon'>
-                <AssignmentIcon height={height} width={width} />
-            </div>
-            <div title='ListNumberedIcon'>
-                <ListNumberedIcon height={height} width={width} />
-            </div>
-            <div title='MessageProcessingIcon'>
-                <MessageProcessingIcon height={height} width={width} />
-            </div>
-            <div title='MessageProcessingOutline'>
-                <MessageProcessingOutlineIcon height={height} width={width} />
-            </div>
-            <div title='PermMediaIcon'>
-                <PermMediaIcon height={height} width={height} />
-            </div>
-            <div title='PermMediaOutline'>
-                <PermMediaOutline height={height} width={height} />
-            </div>
-            <div title='CalendarBlankOutlineIcon'>
-                <CalendarBlankOutlineIcon height={height} width={height} />
-            </div>
-            <div title='ClockOutlineIcon'>
-                <ClockOutlineIcon height={height} width={height} />
-            </div>
-            <div title='InboxOutboxIcon'>
-                <InboxOutboxIcon height={height} width={height} />
-            </div>
-            <div title='InboxOutboxOutlineIcon'>
-                <InboxOutboxOutlineIcon height={height} width={height} />
-            </div>
-            <div title='TopicIcon'>
-                <TopicIcon height={height} width={width} />
-            </div>
-            <div title='EmptyPageIcon'>
-                <EmptyPageIcon height={height} width={width} />
-            </div>
-            <div title='DragHorizontalIcon'>
-                <DragHorizontalIcon height={height} width={width} />
-            </div>
-            <div title='FilePdfIcon'>
-                <FilePdfIcon height={height} width={width} />
-            </div>
-            <div title='DeleteOutlineIcon'>
-                <DeleteOutlineIcon height={height} width={width} />
-            </div>
-            <div title='FilterIcon'>
-                <FilterIcon height={height} width={width} />
-            </div>
-            <div title='LockIcon'>
-                <LockIcon height={height} width={width} />
-            </div>
-            <div title='UnlockIcon'>
-                <UnlockIcon height={height} width={width} />
-            </div>
-            <div title='DvrIcon'>
-                <DvrIcon height={height} width={width} />
-            </div>
-            <div title='ErrorOutlineIcon'>
-                <ErrorOutlineIcon height={height} width={width} />
-            </div>
-            <div title='ReplayIcon'>
-                <ReplayIcon height={height} width={width} />
-            </div>
-            <div title='LinkOutlineIcon'>
-                <LinkOutlineIcon height={height} width={width} />
-            </div>
-            <div title='FastCheckOutlineIcon'>
-                <FastCheckOutlineIcon height={height} width={width} />
-            </div>
-            <div title='UnknownDocumentOutlineRoundedIcon'>
-                <UnknownDocumentOutlineRoundedIcon height={height} width={width} />
-            </div>
-            <div title='ListStatusIcon'>
-                <ListStatusIcon height={height} width={width} />
-            </div>
-            <div title='TextBoxCheckOutlineIcon'>
-                <TextBoxCheckOutlineIcon height={height} width={width} />
-            </div>
-            <div title='ListSettingsLineIcon'>
-                <ListSettingsLineIcon height={height} width={width} />
-            </div>
-            <div title='EarthIcon'>
-                <EarthIcon height={height} width={width} />
-            </div>
-            <div title='SettingsMenuHorizontalIcon'>
-                <SettingsMenuHorizontalIcon height={height} width={width} />
-            </div>
-            <div title='PencilOutlineIcon'>
-                <PencilOutlineIcon height={height} width={width} />
-            </div>
-            <div title='OutlineWarningAmberIcon'>
-                <WarningAmberOutlineIcon height={height} width={height} className='text-amber-600' />
-            </div>
-            <div title='ConsentsIcon'>
-                <ConsentsIcon height={height} width={height} className='text-blue-600' />
-            </div>
-            <div title='MinimizeIcon'>
-                <MinimizeIcon height={height} width={height} className='text-delta-700' />
-            </div>
-            <div title='KeyboardCapslockIcon'>
-                <KeyboardCapslockIcon height={height} width={height} color='violet' />
-            </div>
-            <div title='MessageReplyIcon'>
-                <MessageReplyIcon height={height} width={height} />
-            </div>
-            <div title='BadgeIcon'>
-                <BadgeIcon height={height} width={height} color='violet' />
-            </div>
-
-            <div title='EditSquareIcon'>
-                <EditSquareIcon height={height} width={height} color='violet' />
-            </div>
-
-            <div title='PlusIcon'>
-                <PlusIcon height={height} width={height} color='green' />
-            </div>
-
-            <div title='PlusIconCircle'>
-                <PlusIconCircle height={height} width={height} color='text-gray-700' />
-            </div>
-
-            <div title='HandymanOutlineIcon'>
-                <HandymanOutlineIcon height={height} width={height} color='text-gray-700' />
-            </div>
-
-            <div title='HandymanIcon'>
-                <HandymanIcon height={height} width={height} color='text-gray-700' />
-            </div>
-
-            <div title='PinIcon'>
-                <PinIcon height={height} width={height} color='text-gray-700' />
-            </div>
-
-            <div title='WorkIcon'>
-                <WorkIcon height={height} width={height} className='text-gama-500' />
-            </div>
-
-            <div title='NewCalendarIcon'>
-                <NewCalendarIcon height={height} width={height} className='text-delta-800' />
-            </div>
-
-            <div title='LocationIcon'>
-                <LocationIcon height={height} width={height} />
-            </div>
-
-            <div title='FormIcon'>
-                <FormIcon height={height} width={height} />
-            </div>
-
-            <div title='RepeatOutlineIcon'>
-                <RepeatOutlineIcon height={height} width={height} />
-            </div>
-
-            <div title='TodayIcon'>
-                <TodayIcon height={height} width={height} />
-            </div>
-
-            <div title='MicrosoftOutlookIcon'>
-                <MicrosoftOutlookIcon height={height} width={height} />
-            </div>
-
-            <div title='LoginIcon'>
-                <LoginIcon height={height} width={height} />
-            </div>
-
-            <div title='LogoutIcon'>
-                <LogoutIcon height={height} width={height} />
-            </div>
-
-            <div title='TimerIcon'>
-                <TimerIcon height={height} width={height} />
-            </div>
-
-            <div title='BackIcon'>
-                <BackIcon height={height} width={height} />
-            </div>
-
-            <div title='HelpIcon'>
-                <HelpIcon height={height} width={height} />
-            </div>
-            <div title='NewWindowIcon'>
-                <NewWindowIcon height={height} width={height} />
-            </div>
-            <div title='DoneAllIcon'>
-                <DoneAllIcon height={height} width={height} />
+                {icons.map((icon) => (
+                    <Tippy content={icon.name} interactive>
+                        <div
+                            className='cursor-pointer'
+                            onClick={() => {
+                                toast.success('Copied to clipboard')
+                            }}
+                        >
+                            <CopyToClipboard text={icon.clipboardText}>{icon.component}</CopyToClipboard>
+                        </div>
+                    </Tippy>
+                ))}
             </div>
         </div>
     )

@@ -1,10 +1,7 @@
-import { useEffect, useGlobals } from '@storybook/addons'
-import { withThemeByClassName } from '@storybook/addon-styling'
 import 'tailwindcss/tailwind.css'
 import './normalize.css'
 import './variables.css'
 import './index.css'
-
 
 export const parameters = {
     // themes: {
@@ -15,7 +12,7 @@ export const parameters = {
     //         { name: 'greenish', class: 'theme-greenish', color: 'green' },
     //     ],
     // },
-    actions: { argTypesRegex: '^on[A-Z].*' },
+    // actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
         expanded: true, // Adds the description and default columns
         matchers: {
@@ -24,25 +21,3 @@ export const parameters = {
         },
     },
 }
-
-export const useTheme = (StoryFn) => {
-    const [globals] = useGlobals()
-
-    useEffect(() => {
-        document.body.setAttribute('data-theme', globals.theme)
-    }, [globals])
-
-    return StoryFn()
-}
-
-export const decorators = [
-    useTheme,
-    withThemeByClassName({
-        themes: {
-            default: 'default',
-            fretex: 'fretex',
-            greenish: 'greenish',
-        },
-        defaultTheme: 'greenish',
-    }),
-]

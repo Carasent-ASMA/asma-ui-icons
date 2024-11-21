@@ -7,12 +7,10 @@ const config: StorybookConfig = {
         '@storybook/addon-links',
         '@storybook/addon-essentials',
         '@storybook/addon-interactions',
-        '@storybook/addon-styling',
-        '@storybook/addons',
+        '@storybook/preview-api',
         '@storybook/manager-api',
-        'storybook-addon-themes',
         '@storybook/preset-create-react-app',
-        '@storybook/addon-mdx-gfm',
+        '@chromatic-com/storybook',
     ],
     framework: {
         name: '@storybook/react-vite',
@@ -22,9 +20,7 @@ const config: StorybookConfig = {
             },
         },
     },
-    docs: {
-        autodocs: 'tag',
-    },
+    docs: {},
     core: {},
     typescript: {
         check: true,
