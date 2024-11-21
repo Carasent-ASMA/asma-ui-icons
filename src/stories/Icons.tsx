@@ -90,6 +90,7 @@ import { BackIcon } from 'src/components/icons'
 import { HelpIcon } from 'src/components/icons/help-icon'
 import { NewWindowIcon } from 'src/components/icons/new-window-icon'
 import { DoneAllIcon } from 'src/components/icons/done-all-icon'
+import { UnlockIcon } from 'src/components/icons/unlock-icon'
 
 export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ height = 24, width = 24 }) => {
     return (
@@ -268,6 +269,9 @@ export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ hei
             </div>
             <div title='LockIcon'>
                 <LockIcon height={height} width={width} />
+            </div>
+            <div title='UnlockIcon'>
+                <UnlockIcon height={height} width={width} />
             </div>
             <div title='DvrIcon'>
                 <DvrIcon height={height} width={width} />
