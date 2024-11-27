@@ -9,6 +9,7 @@ import {
     CalendarBlankOutlineIcon,
     CalendarIcon,
     CalendarRangeIcon,
+    CalendarRangeOutlineIcon,
     CheckBoxCheckedIcon,
     CheckFactIcon,
     CheckFactOutlineIcon,
@@ -47,6 +48,7 @@ import {
     HandymanIcon,
     HandymanOutlineIcon,
     HelpIcon,
+    HelpOutlineIcon,
     InboxOutboxIcon,
     InboxOutboxOutlineIcon,
     KeyboardCapslockIcon,
@@ -95,6 +97,18 @@ import {
     UnlockIcon,
     WarningAmberOutlineIcon,
     WorkIcon,
+    DescriptionIcon,
+    DescriptionOutlineIcon,
+    DnsOutlineIcon,
+    DnsIcon,
+    RuleIcon,
+    RuleOutlineIcon,
+    FormatListBulletedIcon,
+    FormatListBulletedOutlineIcon,
+    PersonSearchIcon,
+    PersonSearchOutlineIcon,
+    ContentCopyIcon,
+    ContentCopyOutlineIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -104,6 +118,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <HelpIcon height={height} width={width} />,
             clipboardText: '<HelpIcon />',
             tags: ['help'],
+        },
+        {
+            name: 'HelpOutlineIcon',
+            component: <HelpOutlineIcon height={height} width={width} />,
+            clipboardText: '<HelpOutlineIcon />',
+            tags: ['help outline'],
         },
         {
             name: 'LoadingIcon',
@@ -332,6 +352,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <CalendarRangeIcon height={height} width={width} />,
             clipboardText: '<CalendarRangeIcon />',
             tags: ['calendar range'],
+        },
+        {
+            name: 'CalendarRangeOutlineIcon',
+            component: <CalendarRangeOutlineIcon height={height} width={width} />,
+            clipboardText: '<CalendarRangeOutlineIcon />',
+            tags: ['calendar range outline'],
         },
         {
             name: 'TodayIcon',
@@ -663,11 +689,84 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             clipboardText: '<DoneAllIcon />',
             tags: ['done all'],
         },
-           {
+        {
             name: 'UnlockIcon',
             component: <UnlockIcon height={height} width={width} />,
             clipboardText: '<UnlockIcon />',
             tags: ['Unlock'],
+        },
+        {
+            name: 'DescriptionIcon',
+            component: <DescriptionIcon height={height} width={width} />,
+            clipboardText: '<DescriptionIcon />',
+            tags: ['description '],
+        },
+        {
+            name: 'DescriptionOutlineIcon',
+            component: <DescriptionOutlineIcon height={height} width={width} />,
+            clipboardText: '<DescriptionOutlineIcon />',
+            tags: ['description outline'],
+        },
+
+        {
+            name: 'DnsIcon',
+            component: <DnsIcon height={height} width={width} />,
+            clipboardText: '<DnsIcon />',
+            tags: ['dns '],
+        },
+        {
+            name: 'DnsOutlineIcon',
+            component: <DnsOutlineIcon height={height} width={width} />,
+            clipboardText: '<DnsOutlineIcon />',
+            tags: ['dns outline'],
+        },
+        {
+            name: 'RuleIcon',
+            component: <RuleIcon height={height} width={width} />,
+            clipboardText: '<RuleIcon />',
+            tags: ['rule '],
+        },
+        {
+            name: 'RuleOutlineIcon',
+            component: <RuleOutlineIcon height={height} width={width} />,
+            clipboardText: '<RuleOutlineIcon />',
+            tags: ['rule outline'],
+        },
+        {
+            name: 'FormatListBulletedIcon',
+            component: <FormatListBulletedIcon height={height} width={width} />,
+            clipboardText: '<FormatListBulletedIcon />',
+            tags: ['format list bulleted'],
+        },
+        {
+            name: 'FormatListBulletedOutlineIcon',
+            component: <FormatListBulletedOutlineIcon height={height} width={width} />,
+            clipboardText: '<FormatListBulletedOutlineIcon />',
+            tags: ['format list bulleted outline'],
+        },
+        {
+            name: 'PersonSearchIcon',
+            component: <PersonSearchIcon height={height} width={width} />,
+            clipboardText: '<PersonSearchIcon />',
+            tags: ['person search '],
+        },
+        {
+            name: 'PersonSearchOutlineIcon',
+            component: <PersonSearchOutlineIcon height={height} width={width} />,
+            clipboardText: '<PersonSearchOutlineIcon />',
+            tags: ['person search outline'],
+        },
+        {
+            name: 'ContentCopyIcon',
+            component: <ContentCopyIcon height={height} width={width} />,
+            clipboardText: '<ContentCopyIcon />',
+            tags: ['content copy '],
+        },
+        {
+            name: 'ContentCopyOutlineIcon',
+            component: <ContentCopyOutlineIcon height={height} width={width} />,
+            clipboardText: '<ContentCopyOutlineIcon />',
+            tags: ['content copy outline'],
         },
     ]
 
