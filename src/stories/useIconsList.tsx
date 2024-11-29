@@ -109,6 +109,7 @@ import {
     PersonSearchOutlineIcon,
     ContentCopyIcon,
     ContentCopyOutlineIcon,
+    RefreshIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -767,6 +768,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <ContentCopyOutlineIcon height={height} width={width} />,
             clipboardText: '<ContentCopyOutlineIcon />',
             tags: ['content copy outline'],
+        },
+        {
+            name: 'RefreshIcon',
+            component: <RefreshIcon height={height} width={width} />,
+            clipboardText: '<RefreshIcon />',
+            tags: ['refresh '],
         },
     ]
 
