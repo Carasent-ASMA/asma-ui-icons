@@ -110,6 +110,7 @@ import {
     ContentCopyIcon,
     ContentCopyOutlineIcon,
     RefreshIcon,
+    SettingsNoteIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -774,6 +775,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <RefreshIcon height={height} width={width} />,
             clipboardText: '<RefreshIcon />',
             tags: ['refresh '],
+        },
+        {
+            name: 'SettingsNoteIcon',
+            component: <SettingsNoteIcon height={height} width={width} />,
+            clipboardText: '<SettingsNoteIcon />',
+            tags: ['settings-note'],
         },
     ]
 
