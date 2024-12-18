@@ -111,6 +111,7 @@ import {
     ContentCopyOutlineIcon,
     RefreshIcon,
     SettingsNoteIcon,
+    InheritancePointerIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -781,6 +782,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <SettingsNoteIcon height={height} width={width} />,
             clipboardText: '<SettingsNoteIcon />',
             tags: ['settings-note'],
+        },
+        {
+            name: 'InheritancePointerIcon',
+            component: <InheritancePointerIcon height={height} width={width} />,
+            clipboardText: '<InheritancePointerIcon />',
+            tags: ['inheritance-pointer'],
         },
     ]
 
