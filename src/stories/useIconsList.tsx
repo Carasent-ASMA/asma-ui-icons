@@ -112,6 +112,7 @@ import {
     RefreshIcon,
     SettingsNoteIcon,
     InheritancePointerIcon,
+    CloudDoneOutlineIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -788,6 +789,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <InheritancePointerIcon height={height} width={width} />,
             clipboardText: '<InheritancePointerIcon />',
             tags: ['inheritance-pointer'],
+        },
+        {
+            name: 'CloudDoneOutlineIcon',
+            component: <CloudDoneOutlineIcon height={height} width={width} />,
+            clipboardText: '<CloudDoneOutlineIcon />',
+            tags: ['cloud done outline'],
         },
     ]
 
