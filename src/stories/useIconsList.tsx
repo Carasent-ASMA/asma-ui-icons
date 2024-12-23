@@ -113,6 +113,7 @@ import {
     SettingsNoteIcon,
     InheritancePointerIcon,
     CloudDoneOutlineIcon,
+    AttachFileIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -795,6 +796,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <CloudDoneOutlineIcon height={height} width={width} />,
             clipboardText: '<CloudDoneOutlineIcon />',
             tags: ['cloud done outline'],
+        },
+        {
+            name: 'AttachFileIcon',
+            component: <AttachFileIcon height={height} width={width} />,
+            clipboardText: '<AttachFileIcon />',
+            tags: ['attach file outline'],
         },
     ]
 
