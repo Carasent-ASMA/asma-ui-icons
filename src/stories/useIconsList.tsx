@@ -115,6 +115,7 @@ import {
     CloudDoneOutlineIcon,
     AttachFileIcon,
     SendIcon,
+    CardIdIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -809,6 +810,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <SendIcon height={height} width={width} />,
             clipboardText: '<SendIcon />',
             tags: ['send icon'],
+        },
+        {
+            name: 'CardIdIcon',
+            component: <CardIdIcon height={height} width={width} />,
+            clipboardText: '<CardIdIcon />',
+            tags: ['card identity icon'],
         },
     ]
 
