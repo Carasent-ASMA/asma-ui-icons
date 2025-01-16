@@ -117,6 +117,7 @@ import {
     SendIcon,
     CardIdIcon,
 } from 'src/components/icons'
+import { CheckCircleIcon } from 'src/components/icons/check-circle-icon'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
     const icons = [
@@ -335,6 +336,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <CheckOutlineIcon height={height} width={width} color='green' />,
             clipboardText: '<CheckOutlineIcon />',
             tags: ['check outline'],
+        },
+        {
+            name: 'CheckCircleIcon',
+            component: <CheckCircleIcon height={height} width={width} color='green' />,
+            clipboardText: '<CheckCircleIcon />',
+            tags: ['check circle'],
         },
         {
             name: 'CheckFactOutlineIcon',
