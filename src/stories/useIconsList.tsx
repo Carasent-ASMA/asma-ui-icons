@@ -117,6 +117,7 @@ import {
     SendIcon,
     CardIdIcon,
 } from 'src/components/icons'
+import { CardIdIconOutlined } from 'src/components/icons/card-id-icon-outlined'
 import { CheckCircleIcon } from 'src/components/icons/check-circle-icon'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -823,6 +824,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <CardIdIcon height={height} width={width} />,
             clipboardText: '<CardIdIcon />',
             tags: ['card identity icon'],
+        },
+        {
+            name: 'CardIdIconOutlined',
+            component: <CardIdIconOutlined height={height} width={width} />,
+            clipboardText: '<CardIdIconOutlined />',
+            tags: ['card identity icon outlined'],
         },
     ]
 
