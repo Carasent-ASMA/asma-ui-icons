@@ -118,6 +118,9 @@ import {
     CardIdIcon,
     OutlineNotificationsIcon,
     SyncIcon,
+    OutlineCheckboxIconBlank,
+    OutlineCheckboxIconIndeterminate,
+    OutlineCheckboxIconChecked,
 } from 'src/components/icons'
 import { CardIdIconOutlined } from 'src/components/icons/card-id-icon-outlined'
 import { CheckCircleIcon } from 'src/components/icons/check-circle-icon'
@@ -844,6 +847,24 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <SyncIcon height={height} width={width} />,
             clipboardText: '<SyncIcon />',
             tags: ['sync icon'],
+        },
+        {
+            name: 'OutlineCheckboxIconBlank',
+            component: <OutlineCheckboxIconBlank height={height} width={width} />,
+            clipboardText: '<OutlineCheckboxIconBlank />',
+            tags: ['blank checkbox icon'],
+        },
+        {
+            name: 'OutlineCheckboxIconIndeterminate',
+            component: <OutlineCheckboxIconIndeterminate height={height} width={width} />,
+            clipboardText: '<OutlineCheckboxIconIndeterminate />',
+            tags: ['indeterminate checkbox icon'],
+        },
+        {
+            name: 'OutlineCheckboxIconChecked',
+            component: <OutlineCheckboxIconChecked height={height} width={width} />,
+            clipboardText: '<OutlineCheckboxIconChecked />',
+            tags: ['checked checkbox icon'],
         },
     ]
 
