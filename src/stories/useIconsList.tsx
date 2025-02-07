@@ -117,6 +117,7 @@ import {
     SendIcon,
     CardIdIcon,
     OutlineNotificationsIcon,
+    SyncIcon,
 } from 'src/components/icons'
 import { CardIdIconOutlined } from 'src/components/icons/card-id-icon-outlined'
 import { CheckCircleIcon } from 'src/components/icons/check-circle-icon'
@@ -837,6 +838,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <OutlineNotificationsIcon height={height} width={width} />,
             clipboardText: '<OutlineNotificationsIcon />',
             tags: ['notifications icon outlined'],
+        },
+        {
+            name: 'SyncIcon',
+            component: <SyncIcon height={height} width={width} />,
+            clipboardText: '<SyncIcon />',
+            tags: ['sync icon'],
         },
     ]
 
