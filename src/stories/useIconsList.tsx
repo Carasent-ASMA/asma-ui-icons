@@ -121,6 +121,7 @@ import {
     OutlineCheckboxIconBlank,
     OutlineCheckboxIconIndeterminate,
     OutlineCheckboxIconChecked,
+    HistoryIcon,
 } from 'src/components/icons'
 import { CardIdIconOutlined } from 'src/components/icons/card-id-icon-outlined'
 import { CheckCircleIcon } from 'src/components/icons/check-circle-icon'
@@ -865,6 +866,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <OutlineCheckboxIconChecked height={height} width={width} />,
             clipboardText: '<OutlineCheckboxIconChecked />',
             tags: ['checked checkbox icon'],
+        },
+        {
+            name: 'HistoryIcon',
+            component: <HistoryIcon height={height} width={width} />,
+            clipboardText: '<HistoryIcon />',
+            tags: ['history icon'],
         },
     ]
 
