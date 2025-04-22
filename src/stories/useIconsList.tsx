@@ -125,6 +125,7 @@ import {
 } from 'src/components/icons'
 import { CardIdIconOutlined } from 'src/components/icons/card-id-icon-outlined'
 import { CheckCircleIcon } from 'src/components/icons/check-circle-icon'
+import { ConversionPathIcon } from 'src/components/icons/conversion-path/ConversionPathIcon'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
     const icons = [
@@ -872,6 +873,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <HistoryIcon height={height} width={width} />,
             clipboardText: '<HistoryIcon />',
             tags: ['history icon'],
+        },
+        {
+            name: 'ConversionPathIcon',
+            component: <ConversionPathIcon height={height} width={width} />,
+            clipboardText: '<ConversionPathIcon />',
+            tags: ['conversion path icon'],
         },
     ]
 
