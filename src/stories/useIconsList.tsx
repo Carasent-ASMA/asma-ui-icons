@@ -122,6 +122,9 @@ import {
     OutlineCheckboxIconIndeterminate,
     OutlineCheckboxIconChecked,
     HistoryIcon,
+    GraphIcon,
+    GraphOutlineIcon,
+    NotesIcon,
 } from 'src/components/icons'
 import { CardIdIconOutlined } from 'src/components/icons/card-id-icon-outlined'
 import { CheckCircleIcon } from 'src/components/icons/check-circle-icon'
@@ -879,6 +882,24 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <ConversionPathIcon height={height} width={width} />,
             clipboardText: '<ConversionPathIcon />',
             tags: ['conversion path icon'],
+        },
+        {
+            name: 'GraphIcon',
+            component: <GraphIcon height={height} width={width} />,
+            clipboardText: '<GraphIcon />',
+            tags: ['graph icon'],
+        },
+        {
+            name: 'GraphOutlineIcon',
+            component: <GraphOutlineIcon height={height} width={width} />,
+            clipboardText: '<GraphOutlineIcon />',
+            tags: ['graph outline icon'],
+        },
+        {
+            name: 'NotesIcon',
+            component: <NotesIcon height={height} width={width} />,
+            clipboardText: '<NotesIcon />',
+            tags: ['notes icon'],
         },
     ]
 
