@@ -125,6 +125,7 @@ import {
     GraphIcon,
     GraphOutlineIcon,
     NotesIcon,
+    SaveIcon,
 } from 'src/components/icons'
 import { CardIdIconOutlined } from 'src/components/icons/card-id-icon-outlined'
 import { CheckCircleIcon } from 'src/components/icons/check-circle-icon'
@@ -900,6 +901,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <NotesIcon height={height} width={width} />,
             clipboardText: '<NotesIcon />',
             tags: ['notes icon'],
+        },
+        {
+            name: 'SaveIcon',
+            component: <SaveIcon height={height} width={width} />,
+            clipboardText: '<SaveIcon />',
+            tags: ['save icon'],
         },
     ]
 
