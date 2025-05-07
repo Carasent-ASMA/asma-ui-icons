@@ -126,6 +126,7 @@ import {
     GraphOutlineIcon,
     NotesIcon,
     SaveIcon,
+    RemoveIcon,
 } from 'src/components/icons'
 import { CardIdIconOutlined } from 'src/components/icons/card-id-icon-outlined'
 import { CheckCircleIcon } from 'src/components/icons/check-circle-icon'
@@ -636,6 +637,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <PlusIconCircle height={height} width={width} />,
             clipboardText: '<PlusIconCircle />',
             tags: ['plus circle'],
+        },
+        {
+            name: 'RemoveIcon',
+            component: <RemoveIcon height={height} width={width} />,
+            clipboardText: '<RemoveIcon />',
+            tags: ['remove'],
         },
         {
             name: 'HandymanOutlineIcon',
