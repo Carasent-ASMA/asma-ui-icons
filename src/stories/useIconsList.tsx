@@ -127,6 +127,8 @@ import {
     NotesIcon,
     SaveIcon,
     RemoveIcon,
+    EnvelopeIcon,
+    FingerprintIcon,
 } from 'src/components/icons'
 import { CardIdIconOutlined } from 'src/components/icons/card-id-icon-outlined'
 import { CheckCircleIcon } from 'src/components/icons/check-circle-icon'
@@ -914,6 +916,18 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <SaveIcon height={height} width={width} />,
             clipboardText: '<SaveIcon />',
             tags: ['save icon'],
+        },
+        {
+            name: 'EnvelopeIcon',
+            component: <EnvelopeIcon height={height} width={width} />,
+            clipboardText: '<EnvelopeIcon />',
+            tags: ['envelope icon email message'],
+        },
+        {
+            name: 'FingerprintIcon',
+            component: <FingerprintIcon height={height} width={width} />,
+            clipboardText: '<FingerprintIcon />',
+            tags: ['fingerprint icon biometric'],
         },
     ]
 
