@@ -127,3 +127,6 @@ export * from './save-icon'
 export * from './remove-icon'
 export * from './envelope-icon'
 export * from './fingerprint-icon'
+export * from './upload-icon'
+export * from './cancel-outline-icon'
+

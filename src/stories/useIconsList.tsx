@@ -129,6 +129,8 @@ import {
     RemoveIcon,
     EnvelopeIcon,
     FingerprintIcon,
+    UploadIcon,
+    CancelOutlineIcon,
 } from 'src/components/icons'
 import { CardIdIconOutlined } from 'src/components/icons/card-id-icon-outlined'
 import { CheckCircleIcon } from 'src/components/icons/check-circle-icon'
@@ -647,6 +649,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             tags: ['remove'],
         },
         {
+            name: 'HandymanIcon',
+            component: <HandymanIcon height={height} width={width} />,
+            clipboardText: '<HandymanIcon />',
+            tags: ['handyman'],
+        },
+        {
             name: 'HandymanOutlineIcon',
             component: <HandymanOutlineIcon height={height} width={width} />,
             clipboardText: '<HandymanOutlineIcon />',
@@ -928,6 +936,18 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <FingerprintIcon height={height} width={width} />,
             clipboardText: '<FingerprintIcon />',
             tags: ['fingerprint icon biometric'],
+        },
+        {
+            name: 'UploadIcon',
+            component: <UploadIcon height={height} width={width} />,
+            clipboardText: '<UploadIcon />',
+            tags: ['upload icon'],
+        },
+        {
+            name: 'CancelOutlineIcon',
+            component: <CancelOutlineIcon height={height} width={width} />,
+            clipboardText: '<CancelOutlineIcon />',
+            tags: ['cancel outline icon'],
         },
     ]
 
