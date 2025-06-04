@@ -129,4 +129,4 @@ export * from './envelope-icon'
 export * from './fingerprint-icon'
 export * from './upload-icon'
 export * from './cancel-outline-icon'
-
+export * from './info-outline-icon'

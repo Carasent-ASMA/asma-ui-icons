@@ -135,6 +135,7 @@ import {
 import { CardIdIconOutlined } from 'src/components/icons/card-id-icon-outlined'
 import { CheckCircleIcon } from 'src/components/icons/check-circle-icon'
 import { ConversionPathIcon } from 'src/components/icons/conversion-path/ConversionPathIcon'
+import { InfoOutlineIcon } from 'src/components/icons/info-outline-icon'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
     const icons = [
@@ -528,6 +529,13 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             clipboardText: '<ErrorOutlineIcon />',
             tags: ['error outline'],
         },
+        {
+            name: 'InfoOutlineIcon',
+            component: <InfoOutlineIcon height={height} width={width} />,
+            clipboardText: '<InfoOutlineIcon />',
+            tags: ['info outline'],
+        },
+        ,
         {
             name: 'ReplayIcon',
             component: <ReplayIcon height={height} width={width} />,
@@ -953,8 +961,8 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
 
     const filteredIcons = icons.filter(
         (icon) =>
-            icon.name.trim().toLowerCase().includes(filterText.toLowerCase().trim()) ||
-            icon.tags.some((tag) => tag.trim().toLowerCase().includes(filterText.toLowerCase().trim())),
+            icon?.name.trim().toLowerCase().includes(filterText.toLowerCase().trim()) ||
+            icon?.tags.some((tag) => tag.trim().toLowerCase().includes(filterText.toLowerCase().trim())),
     )
 
     return {
