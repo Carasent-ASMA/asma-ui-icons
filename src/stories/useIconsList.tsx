@@ -131,11 +131,12 @@ import {
     FingerprintIcon,
     UploadIcon,
     CancelOutlineIcon,
+    ConversionPathIcon,
+    CardIdIconOutlined,
+    CheckCircleIcon,
+    InfoOutlineIcon,
+    TuneIcon,
 } from 'src/components/icons'
-import { CardIdIconOutlined } from 'src/components/icons/card-id-icon-outlined'
-import { CheckCircleIcon } from 'src/components/icons/check-circle-icon'
-import { ConversionPathIcon } from 'src/components/icons/conversion-path/ConversionPathIcon'
-import { InfoOutlineIcon } from 'src/components/icons/info-outline-icon'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
     const icons = [
@@ -956,6 +957,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <CancelOutlineIcon height={height} width={width} />,
             clipboardText: '<CancelOutlineIcon />',
             tags: ['cancel outline icon'],
+        },
+        {
+            name: 'TuneIcon',
+            component: <TuneIcon height={height} width={width} />,
+            clipboardText: '<TuneIcon />',
+            tags: ['tune icon'],
         },
     ]
 
