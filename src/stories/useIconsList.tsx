@@ -136,6 +136,7 @@ import {
     CheckCircleIcon,
     InfoOutlineIcon,
     TuneIcon,
+    FileDocIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -963,6 +964,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <TuneIcon height={height} width={width} />,
             clipboardText: '<TuneIcon />',
             tags: ['tune icon'],
+        },
+        {
+            name: 'FileDocIcon',
+            component: <FileDocIcon height={height} width={width} />,
+            clipboardText: '<FileDocIcon />',
+            tags: ['file doc icon'],
         },
     ]
 
