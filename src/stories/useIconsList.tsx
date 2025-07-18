@@ -138,6 +138,7 @@ import {
     TuneIcon,
     FileDocIcon,
     DvrIconOutline,
+    BackupIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -977,6 +978,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <DvrIconOutline height={height} width={width} />,
             clipboardText: '<DvrIconOutline />',
             tags: ['dvr icon outline'],
+        },
+        {
+            name: 'BackupIcon',
+            component: <BackupIcon height={height} width={width} />,
+            clipboardText: '<BackupIcon />',
+            tags: ['backup icon'],
         },
     ]
 

@@ -2,7 +2,7 @@ import type { SVGProps } from 'react'
 
 export function FileDocIcon(props: SVGProps<SVGSVGElement>) {
     return (
-        <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none' {...props}>
+        <svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' {...props}>
             <path
                 d='M4.99967 18.3334C4.54134 18.3334 4.14898 18.1702 3.82259 17.8438C3.4962 17.5174 3.33301 17.125 3.33301 16.6667V15.8334H4.99967V16.6667H14.9997V15.8334H16.6663V16.6667C16.6663 17.125 16.5031 17.5174 16.1768 17.8438C15.8504 18.1702 15.458 18.3334 14.9997 18.3334H4.99967Z'
                 fill='currentColor'
