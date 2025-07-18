@@ -139,6 +139,8 @@ import {
     FileDocIcon,
     DvrIconOutline,
     BackupIcon,
+    DownloadTrayIcon,
+    DownloadingIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -984,6 +986,18 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <BackupIcon height={height} width={width} />,
             clipboardText: '<BackupIcon />',
             tags: ['backup icon'],
+        },
+        {
+            name: 'DownloadTrayIcon',
+            component: <DownloadTrayIcon height={height} width={width} />,
+            clipboardText: '<DownloadTrayIcon />',
+            tags: ['download tray icon'],
+        },
+        {
+            name: 'DownloadingIcon',
+            component: <DownloadingIcon height={height} width={width} />,
+            clipboardText: '<DownloadingIcon />',
+            tags: ['downloading icon'],
         },
     ]
 
