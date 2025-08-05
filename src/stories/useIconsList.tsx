@@ -142,6 +142,7 @@ import {
     BackupIcon,
     DownloadTrayIcon,
     DownloadingIcon,
+    LinkOffIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -554,6 +555,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <LinkOutlineIcon height={height} width={width} />,
             clipboardText: '<LinkOutlineIcon />',
             tags: ['link outline'],
+        },
+        {
+            name: 'LinkOffIcon',
+            component: <LinkOffIcon height={height} width={width} />,
+            clipboardText: '<LinkOffIcon />',
+            tags: ['link off'],
         },
         {
             name: 'FastCheckOutlineIcon',
