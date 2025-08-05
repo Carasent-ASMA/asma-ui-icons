@@ -137,6 +137,7 @@ import {
     InfoOutlineIcon,
     TuneIcon,
     FileDocIcon,
+    FileRtfIcon,
     DvrIconOutline,
     BackupIcon,
     DownloadTrayIcon,
@@ -974,6 +975,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <FileDocIcon height={height} width={width} />,
             clipboardText: '<FileDocIcon />',
             tags: ['file doc icon'],
+        },
+        {
+            name: 'FileRtfIcon',
+            component: <FileRtfIcon height={height} width={width} />,
+            clipboardText: '<FileRtfIcon />',
+            tags: ['file rtf icon'],
         },
         {
             name: 'DvrIconOutline',
