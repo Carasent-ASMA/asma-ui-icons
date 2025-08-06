@@ -96,6 +96,7 @@ import {
     UnknownDocumentOutlineRoundedIcon,
     UnlockIcon,
     WarningAmberOutlineIcon,
+    CircleWarningOutlineIcon,
     WorkIcon,
     DescriptionIcon,
     DescriptionOutlineIcon,
@@ -615,6 +616,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <WarningAmberOutlineIcon height={height} width={width} color='red' />,
             clipboardText: '<WarningAmberOutlineIcon />',
             tags: ['warning amber outline'],
+        },
+        {
+            name: 'CircleWarningOutlineIcon',
+            component: <CircleWarningOutlineIcon height={height} width={width} color='red' />,
+            clipboardText: '<CircleWarningOutlineIcon />',
+            tags: ['circle warning outline'],
         },
         {
             name: 'ConsentsIcon',
