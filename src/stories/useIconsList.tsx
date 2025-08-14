@@ -144,6 +144,7 @@ import {
     DownloadTrayIcon,
     DownloadingIcon,
     LinkOffIcon,
+    AppRegistrationIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -1019,6 +1020,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <DownloadingIcon height={height} width={width} />,
             clipboardText: '<DownloadingIcon />',
             tags: ['downloading icon'],
+        },
+        {
+            name: 'AppRegistrationIcon',
+            component: <AppRegistrationIcon height={height} width={width} />,
+            clipboardText: '<AppRegistrationIcon />',
+            tags: ['app registration icon'],
         },
     ]
 
