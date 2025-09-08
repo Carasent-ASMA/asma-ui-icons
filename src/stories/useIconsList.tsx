@@ -145,6 +145,7 @@ import {
     DownloadingIcon,
     LinkOffIcon,
     AppRegistrationIcon,
+    ArrowExpandIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -1026,6 +1027,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <AppRegistrationIcon height={height} width={width} />,
             clipboardText: '<AppRegistrationIcon />',
             tags: ['app registration icon'],
+        },
+        {
+            name: 'ArrowExpandIcon',
+            component: <ArrowExpandIcon height={height} width={width} />,
+            clipboardText: '<ArrowExpandIcon />',
+            tags: ['arrow expand icon'],
         },
     ]
 
