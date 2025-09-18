@@ -146,6 +146,7 @@ import {
     LinkOffIcon,
     AppRegistrationIcon,
     ArrowExpandIcon,
+    ShareIcon,
 } from 'src/components/icons'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
@@ -1033,6 +1034,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <ArrowExpandIcon height={height} width={width} />,
             clipboardText: '<ArrowExpandIcon />',
             tags: ['arrow expand icon'],
+        },
+        {
+            name: 'ShareIcon',
+            component: <ShareIcon height={height} width={width} />,
+            clipboardText: '<ShareIcon />',
+            tags: ['share icon'],
         },
     ]
 
