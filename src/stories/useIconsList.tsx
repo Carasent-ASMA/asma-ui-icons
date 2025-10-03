@@ -148,6 +148,7 @@ import {
     ArrowExpandIcon,
     ShareIcon,
 } from 'src/components/icons'
+import { FilterIconOff } from 'src/components/icons/filter-icon-off'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
     const icons = [
@@ -522,6 +523,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <FilterIcon height={height} width={width} />,
             clipboardText: '<FilterIcon />',
             tags: ['filter'],
+        },
+        {
+            name: 'FilterIconOff',
+            component: <FilterIconOff height={height} width={width} />,
+            clipboardText: '<FilterIconOff />',
+            tags: ['filter-off'],
         },
         {
             name: 'LockIcon',
