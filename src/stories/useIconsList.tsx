@@ -147,6 +147,7 @@ import {
     AppRegistrationIcon,
     ArrowExpandIcon,
     ShareIcon,
+    SyncSavedLocallyIcon,
 } from 'src/components/icons'
 import { FilterIconOff } from 'src/components/icons/filter-icon-off'
 
@@ -1048,6 +1049,13 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             clipboardText: '<ShareIcon />',
             tags: ['share icon'],
         },
+        {
+            name: 'SyncSavedLocallyIcon',
+            component: <SyncSavedLocallyIcon height={height} width={width} />,
+            clipboardText: '<SyncSavedLocallyIcon />',
+            tags: ['sync saved locally icon'],
+        },
+
     ]
 
     const filteredIcons = icons.filter(
