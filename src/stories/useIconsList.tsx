@@ -114,6 +114,7 @@ import {
     SettingsNoteIcon,
     InheritancePointerIcon,
     CloudDoneOutlineIcon,
+    CloudOffOutlineIcon,
     AttachFileIcon,
     SendIcon,
     CardIdIcon,
@@ -876,6 +877,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             tags: ['cloud done outline'],
         },
         {
+            name: 'CloudOffOutlineIcon',
+            component: <CloudOffOutlineIcon height={height} width={width} />,
+            clipboardText: '<CloudOffOutlineIcon />',
+            tags: ['cloud off outline'],
+        },
+        {
             name: 'AttachFileIcon',
             component: <AttachFileIcon height={height} width={width} />,
             clipboardText: '<AttachFileIcon />',
@@ -1055,7 +1062,6 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             clipboardText: '<SyncSavedLocallyIcon />',
             tags: ['sync saved locally icon'],
         },
-
     ]
 
     const filteredIcons = icons.filter(
