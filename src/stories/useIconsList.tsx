@@ -149,6 +149,7 @@ import {
     ArrowExpandIcon,
     ShareIcon,
     SyncSavedLocallyIcon,
+    VisibilityOutlineIcon,
 } from 'src/components/icons'
 import { FilterIconOff } from 'src/components/icons/filter-icon-off'
 
@@ -1060,6 +1061,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             name: 'SyncSavedLocallyIcon',
             component: <SyncSavedLocallyIcon height={height} width={width} />,
             clipboardText: '<SyncSavedLocallyIcon />',
+            tags: ['sync saved locally icon'],
+        },
+        {
+            name: 'VisibilityOutlineIcon',
+            component: <VisibilityOutlineIcon height={height} width={width} />,
+            clipboardText: '<VisibilityOutlineIcon />',
             tags: ['sync saved locally icon'],
         },
     ]
