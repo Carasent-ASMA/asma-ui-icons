@@ -151,6 +151,7 @@ import {
     SyncSavedLocallyIcon,
     VisibilityOutlineIcon,
     SmsIcon,
+    ArrowLeftIcon,
 } from 'src/components/icons'
 import { FilterIconOff } from 'src/components/icons/filter-icon-off'
 
@@ -1075,6 +1076,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <SmsIcon height={height} width={width} />,
             clipboardText: '<SmsIcon />',
             tags: ['sms icon'],
+        },
+        {
+            name: 'ArrowLeftIcon',
+            component: <ArrowLeftIcon height={height} width={width} />,
+            clipboardText: '<ArrowLeftIcon />',
+            tags: ['arrow left icon'],
         },
     ]
 
