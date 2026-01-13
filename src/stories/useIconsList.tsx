@@ -154,6 +154,7 @@ import {
     ArrowLeftIcon,
 } from 'src/components/icons'
 import { FilterIconOff } from 'src/components/icons/filter-icon-off'
+import { TimelapseOutlineIcon } from '../components/icons/timelapse-outline-icon'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
     const icons = [
@@ -1082,6 +1083,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <ArrowLeftIcon height={height} width={width} />,
             clipboardText: '<ArrowLeftIcon />',
             tags: ['arrow left icon'],
+        },
+        {
+            name: 'TimelapseOutlineIcon',
+            component: <TimelapseOutlineIcon height={height} width={width} />,
+            clipboardText: '<TimelapseOutlineIcon />',
+            tags: ['timelapse icon'],
         },
     ]
 
