@@ -152,6 +152,7 @@ import {
     VisibilityOutlineIcon,
     SmsIcon,
     ArrowLeftIcon,
+    WandStarsIcon,
 } from 'src/components/icons'
 import { FilterIconOff } from 'src/components/icons/filter-icon-off'
 import { TimelapseOutlineIcon } from '../components/icons/timelapse-outline-icon'
@@ -560,7 +561,6 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             clipboardText: '<InfoOutlineIcon />',
             tags: ['info outline'],
         },
-        ,
         {
             name: 'ReplayIcon',
             component: <ReplayIcon height={height} width={width} />,
@@ -1089,6 +1089,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <TimelapseOutlineIcon height={height} width={width} />,
             clipboardText: '<TimelapseOutlineIcon />',
             tags: ['timelapse icon'],
+        },
+        {
+            name: 'WandStarsIcon',
+            component: <WandStarsIcon height={height} width={width} />,
+            clipboardText: '<WandStarsIcon />',
+            tags: ['wand stars icon'],
         },
     ]
 
