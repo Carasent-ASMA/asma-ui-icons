@@ -153,6 +153,7 @@ import {
     SmsIcon,
     ArrowLeftIcon,
     WandStarsIcon,
+    ResetSettingsIcon,
 } from 'src/components/icons'
 import { FilterIconOff } from 'src/components/icons/filter-icon-off'
 import { TimelapseOutlineIcon } from '../components/icons/timelapse-outline-icon'
@@ -1095,6 +1096,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <WandStarsIcon height={height} width={width} />,
             clipboardText: '<WandStarsIcon />',
             tags: ['wand stars icon'],
+        },
+        {
+            name: 'ResetSettingsIcon',
+            component: <ResetSettingsIcon height={height} width={width} />,
+            clipboardText: '<ResetSettingsIcon />',
+            tags: ['reset settings icon'],
         },
     ]
 
