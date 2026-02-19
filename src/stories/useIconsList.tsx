@@ -154,6 +154,7 @@ import {
     ArrowLeftIcon,
     WandStarsIcon,
     ResetSettingsIcon,
+    HistoryToggleOffIcon,
 } from 'src/components/icons'
 import { FilterIconOff } from 'src/components/icons/filter-icon-off'
 import { TimelapseOutlineIcon } from '../components/icons/timelapse-outline-icon'
@@ -1102,6 +1103,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <ResetSettingsIcon height={height} width={width} />,
             clipboardText: '<ResetSettingsIcon />',
             tags: ['reset settings icon'],
+        },
+        {
+            name: 'HistoryToggleOffIcon',
+            component: <HistoryToggleOffIcon height={height} width={width} />,
+            clipboardText: '<HistoryToggleOffIcon />',
+            tags: ['history toggle off icon'],
         },
     ]
 
