@@ -1,5 +1,7 @@
 # How to create and use the Design System
 
+> **Parallel test**: Verifying concurrent AI commit messages and parallel git push operations! 🎨
+
 ## Component composition.
 
 - When creating components that consists of several components, each component should be styled.
