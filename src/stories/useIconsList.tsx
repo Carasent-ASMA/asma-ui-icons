@@ -158,6 +158,7 @@ import {
 } from 'src/components/icons'
 import { FilterIconOff } from 'src/components/icons/filter-icon-off'
 import { TimelapseOutlineIcon } from '../components/icons/timelapse-outline-icon'
+import { CheckReadIcon } from '../components/icons/check-read-icon'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
     const icons = [
@@ -1109,6 +1110,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <HistoryToggleOffIcon height={height} width={width} />,
             clipboardText: '<HistoryToggleOffIcon />',
             tags: ['history toggle off icon'],
+        },
+        {
+            name: 'CheckReadIcon',
+            component: <CheckReadIcon height={height} width={width} />,
+            clipboardText: '<CheckReadIcon />',
+            tags: ['check read'],
         },
     ]
 
