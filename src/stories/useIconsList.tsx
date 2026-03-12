@@ -159,6 +159,7 @@ import {
 import { FilterIconOff } from 'src/components/icons/filter-icon-off'
 import { TimelapseOutlineIcon } from '../components/icons/timelapse-outline-icon'
 import { CheckReadIcon } from '../components/icons/check-read-icon'
+import { ManageSearchIcon } from 'src/components/icons/manage-search-icon'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
     const icons = [
@@ -215,6 +216,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <SearchIcon height={height} width={width} />,
             clipboardText: '<SearchIcon />',
             tags: ['search'],
+        },
+        {
+            name: 'ManageSearchIcon',
+            component: <ManageSearchIcon height={height} width={width} />,
+            clipboardText: '<ManageSearchIcon />',
+            tags: ['manage search icon'],
         },
         {
             name: 'SettingsOutlineIcon',
