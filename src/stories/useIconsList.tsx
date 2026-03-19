@@ -155,6 +155,7 @@ import {
     WandStarsIcon,
     ResetSettingsIcon,
     HistoryToggleOffIcon,
+    EditNotesIcon,
 } from 'src/components/icons'
 import { FilterIconOff } from 'src/components/icons/filter-icon-off'
 import { TimelapseOutlineIcon } from '../components/icons/timelapse-outline-icon'
@@ -1123,6 +1124,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <CheckReadIcon height={height} width={width} />,
             clipboardText: '<CheckReadIcon />',
             tags: ['check read'],
+        },
+        {
+            name: 'EditNotesIcon',
+            component: <EditNotesIcon height={height} width={width} />,
+            clipboardText: '<EditNotesIcon />',
+            tags: ['edit notes icon'],
         },
     ]
 
