@@ -5,6 +5,9 @@
     },
     "version": "0.2.3",
     "type": "module",
+    "repository": {
+        "url": "https://github.com/Carasent-ASMA/asma-ui-icons"
+    },
     "files": [
         "dist/**/*",
         "dist/style.css",
