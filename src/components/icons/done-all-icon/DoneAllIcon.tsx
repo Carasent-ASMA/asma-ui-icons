@@ -3,12 +3,11 @@ import type { SVGProps } from 'react'
 
 export function DoneAllIcon(props: SVGProps<SVGSVGElement>) {
     return (
-        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 24 24' {...props}>
+        <svg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 19 11' {...props}>
             <path
                 fill='currentColor'
-                d='M16.62 6.21a1 1 0 0 0-1.41.17l-7 9l-3.43-4.18a1 1 0 1 0-1.56 1.25l4.17 5.18a1 1 0 0 0 .78.37a1 1 0 0 0 .83-.38l7.83-10a1 1 0 0 0-.21-1.41m5 0a1 1 0 0 0-1.41.17l-7 9l-.61-.75l-1.26 1.62l1.1 1.37a1 1 0 0 0 .78.37a1 1 0 0 0 .78-.38l7.83-10a1 1 0 0 0-.21-1.4'
+                d='M4.70833 10.0208L0 5.3125L1.1875 4.14583L5.89583 8.85417L4.70833 10.0208ZM9.41667 10.0208L4.70833 5.3125L5.875 4.125L9.41667 7.66667L17.0833 0L18.25 1.1875L9.41667 10.0208ZM9.41667 5.3125L8.22917 4.14583L12.3542 0.0208333L13.5417 1.1875L9.41667 5.3125Z'
             ></path>
-            <path fill='currentColor' d='M8.71 13.06L10 11.44l-.2-.24a1 1 0 0 0-1.43-.2a1 1 0 0 0-.15 1.41Z'></path>
         </svg>
     )
 }
