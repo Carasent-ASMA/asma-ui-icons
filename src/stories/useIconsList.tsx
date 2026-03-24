@@ -163,6 +163,7 @@ import { CheckReadIcon } from '../components/icons/check-read-icon'
 import { ManageSearchIcon } from 'src/components/icons/manage-search-icon'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
+    console.log('build')
     const icons = [
         {
             name: 'HelpIcon',
