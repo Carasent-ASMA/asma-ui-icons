@@ -156,6 +156,8 @@ import {
     ResetSettingsIcon,
     HistoryToggleOffIcon,
     EditNotesIcon,
+    FileXlsIcon,
+    FileImageIcon,
 } from 'src/components/icons'
 import { FilterIconOff } from 'src/components/icons/filter-icon-off'
 import { TimelapseOutlineIcon } from '../components/icons/timelapse-outline-icon'
@@ -1130,6 +1132,18 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <EditNotesIcon height={height} width={width} />,
             clipboardText: '<EditNotesIcon />',
             tags: ['edit notes icon'],
+        },
+        {
+            name: 'FileXlsIcon',
+            component: <FileXlsIcon height={height} width={width} />,
+            clipboardText: '<FileXlsIcon />',
+            tags: ['file xls icon'],
+        },
+        {
+            name: 'FileImageIcon',
+            component: <FileImageIcon height={height} width={width} />,
+            clipboardText: '<FileImageIcon />',
+            tags: ['file image icon'],
         },
     ]
 
