@@ -158,6 +158,7 @@ import {
     EditNotesIcon,
     FileXlsIcon,
     FileImageIcon,
+    DrawIcon,
 } from 'src/components/icons'
 import { FilterIconOff } from 'src/components/icons/filter-icon-off'
 import { TimelapseOutlineIcon } from '../components/icons/timelapse-outline-icon'
@@ -1144,6 +1145,12 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <FileImageIcon height={height} width={width} />,
             clipboardText: '<FileImageIcon />',
             tags: ['file image icon'],
+        },
+        {
+            name: 'DrawIcon',
+            component: <DrawIcon height={height} width={width} />,
+            clipboardText: '<DrawIcon />',
+            tags: ['draw icon'],
         },
     ]
 
