@@ -28,4 +28,4 @@ const a11yConfig: TestRunnerConfig = {
     },
 }
 
-module.exports = a11yConfig
+export default a11yConfig

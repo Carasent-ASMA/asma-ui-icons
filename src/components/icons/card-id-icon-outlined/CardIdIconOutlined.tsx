@@ -1,4 +1,4 @@
-import React, { type SVGProps } from 'react'
+import type { SVGProps } from 'react'
 
 export const CardIdIconOutlined = (props: SVGProps<SVGSVGElement>) => {
     return (

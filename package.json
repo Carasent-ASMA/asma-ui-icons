@@ -5,6 +5,9 @@
     },
     "version": "0.2.4",
     "type": "module",
+    "sideEffects": [
+        "**/*.css"
+    ],
     "files": [
         "dist/**/*",
         "dist/style.css",
@@ -17,21 +20,28 @@
     "module": "./dist/asma-ui-icons.es.js",
     "exports": {
         ".": {
-            "import": {
-                "types": "./dist/index.d.ts",
-                "default": "./dist/asma-ui-icons.es.js"
-            }
+            "types": "./dist/index.d.ts",
+            "default": "./dist/asma-ui-icons.es.js"
         },
+        "./icons": {
+            "types": "./dist/src/components/icons/index.d.ts",
+            "default": "./dist/components/icons/index.js"
+        },
+        "./icons/*": {
+            "types": "./dist/src/components/icons/*/index.d.ts",
+            "default": "./dist/components/icons/*/index.js"
+        },
+        "./dist/asma-ui-icons.es.js": "./dist/asma-ui-icons.es.js",
         "./dist/style.css": "./dist/style.css",
         "./tw-configs/twConfigs.json": "./tw-configs/twConfigs.json"
     },
     "scripts": {
         "dev": "vite",
-        "build": "npx tsc && rm -rf ./dist && vite build",
+        "build": "tsc && rm -rf ./dist && vite build",
         "preview": "vite preview",
-        "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
+        "lint": "eslint \"src/**/*.{ts,tsx}\"",
         "version": "echo $npm_package_version",
-        "lint:fix": "eslint --fix src/**/*.{jsx,ts,tsx}",
+        "lint:fix": "eslint --fix \"src/**/*.{ts,tsx}\"",
         "prettier": "prettier --write src//**/*.{ts,tsx,scss} --config ./.prettierrc",
         "storybook": "storybook dev -p 6006",
         "storybook:no-browser": "storybook dev -p 6006 --no-open",
@@ -46,73 +56,61 @@
         "changeset:status": "changeset status"
     },
     "license": "UNLICENSED",
-    "dependencies": {
+    "dependencies": {},
+    "devDependencies": {
+        "@chromatic-com/storybook": "^5.1.1",
         "@emotion/react": "^11.11.1",
         "@emotion/styled": "^11.11.0",
+        "@eslint/eslintrc": "^3.3.5",
+        "@eslint/js": "^9.39.4",
         "@mui/material": "^5.13.7",
-        "node": "18.17.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0"
-    },
-    "devDependencies": {
-        "@chromatic-com/storybook": "^3",
-        "@rollup/plugin-terser": "^0.4.3",
-        "@storybook/addon-a11y": "^8.4.4",
-        "@storybook/addon-essentials": "^8.4.4",
-        "@storybook/addon-interactions": "^8.4.4",
-        "@storybook/addon-links": "^8.4.4",
-        "@storybook/blocks": "^8.4.4",
-        "@storybook/manager-api": "^8.4.4",
-        "@storybook/preset-create-react-app": "^8.4.4",
-        "@storybook/preview-api": "^8.4.4",
-        "@storybook/react": "^8.4.4",
-        "@storybook/react-vite": "^8.4.4",
-        "@storybook/test": "^8.4.4",
-        "@storybook/test-runner": "^0.19.1",
-        "@storybook/theming": "^8.4.4",
+        "@rollup/plugin-terser": "^1.0.0",
+        "@storybook/addon-a11y": "^10.3.5",
+        "@storybook/addon-docs": "^10.3.5",
+        "@storybook/react": "^10.3.5",
+        "@storybook/react-vite": "^10.3.5",
+        "@storybook/test-runner": "^0.24.3",
         "@tippyjs/react": "^4.2.6",
-        "@types/node": "^18.0.3",
+        "@types/node": "^25.5.2",
         "@types/react": "^18.0.37",
         "@types/react-copy-to-clipboard": "^5.0.7",
         "@types/react-dom": "^18.0.11",
-        "@typescript-eslint/eslint-plugin": "^5.59.0",
-        "@typescript-eslint/parser": "^5.59.0",
-        "@vitejs/plugin-react": "^4.0.0",
+        "@typescript-eslint/eslint-plugin": "^8.58.1",
+        "@typescript-eslint/parser": "^8.58.1",
+        "@vitejs/plugin-react": "^6.0.1",
         "asma-core-ui": "3.1.0-3",
-        "autoprefixer": "^10.4.14",
-        "axe-playwright": "^1.2.3",
-        "eslint": "^8.38.0",
-        "eslint-plugin-react-hooks": "^4.6.0",
-        "eslint-plugin-react-refresh": "^0.3.4",
-        "eslint-plugin-storybook": "^0.11.1",
-        "postcss": "^8.4.24",
-        "postcss-nesting": "^13.0.1",
+        "@tailwindcss/postcss": "^4.2.2",
+        "axe-playwright": "^2.2.2",
+        "esbuild": "^0.28.0",
+        "eslint": "^9.39.4",
+        "eslint-plugin-react-hooks": "^7.0.1",
+        "eslint-plugin-react-refresh": "^0.5.2",
+        "eslint-plugin-storybook": "^10.3.5",
+        "postcss": "^8.5.9",
         "prop-types": "^15.8.1",
         "react-copy-to-clipboard": "^5.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
         "react-hot-toast": "^2.4.1",
-        "rollup-plugin-typescript2": "^0.35.0",
-        "sass": "^1.77.5",
-        "storybook": "^8.4.4",
-        "tailwindcss": "^3.3.2",
-        "typescript": "^5.0.2",
+        "rollup-plugin-typescript2": "^0.37.0",
+        "storybook": "^10.3.5",
+        "tailwindcss": "^4.2.2",
+        "typescript": "^6.0.2",
         "typescript-plugin-css-modules": "^5.0.1",
-        "vite": "^4.3.9",
-        "vite-plugin-dts": "^3.1.1",
-        "vite-tsconfig-paths": "^4.2.0"
+        "vite": "^8.0.8",
+        "vite-plugin-dts": "^4.5.4"
     },
     "peerDependencies": {
         "@emotion/react": "^11.*",
         "@emotion/styled": "^11.*",
         "@mui/material": "^5.*",
-        "immer": "^9.*",
-        "react": "^18.*",
-        "react-dom": "^18.*"
+        "react": "^18.0.0 || ^19.0.0",
+        "react-dom": "^18.0.0 || ^19.0.0"
     },
     "repository": {
         "url": "https://github.com/Carasent-ASMA/asma-ui-icons.git"
     },
     "resolutions": {
-        "@types/node": "18.0.3",
-        "node": "18.17.0"
+        "@types/node": "18.0.3"
     }
 }

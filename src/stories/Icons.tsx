@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
+import { useState, type FC } from 'react'
 import Tippy from '@tippyjs/react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import toast, { Toaster } from 'react-hot-toast'
 import './tippy.css'
-import styles from './Icons.module.scss'
 
 import { useIconsList } from './useIconsList'
 
-export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ height = 28, width = 28 }) => {
+export const StyledIcons: FC<{ height?: number; width?: number }> = ({ height = 28, width = 28 }) => {
     const [filterText, setFilterText] = useState('')
     const { icons } = useIconsList({ filterText, height, width })
 
@@ -16,10 +15,10 @@ export const StyledIcons: React.FC<{ height?: number; width?: number }> = ({ hei
             <input
                 type='text'
                 placeholder='Filter icons'
-                className='w-full mb-2 max-w-md duration-300 p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500'
+                className='mb-2 w-full max-w-md rounded-md border border-gray-300 p-2 duration-300 focus:outline-hidden focus:ring-2 focus:ring-blue-500'
                 onChange={(e) => setFilterText(e.target.value)}
             />
-            <div className={styles['all-icons-container']}>
+            <div className='flex h-full w-full flex-wrap items-center gap-5 bg-gray-100 p-5'>
                 <Toaster />
 
                 {icons.map((icon) => (

@@ -1,4 +1,3 @@
-import 'tailwindcss/tailwind.css'
 import './normalize.css'
 import './variables.css'
 import './index.css'
