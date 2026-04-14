@@ -159,11 +159,13 @@ import {
     FileXlsIcon,
     FileImageIcon,
     DrawIcon,
+    IndeterminateIcon,
+    FilterIconOff,
+    TimelapseOutlineIcon,
+    CheckReadIcon,
+    ManageSearchIcon,
+    ArrowShrinkIcon,
 } from '../components/icons'
-import { FilterIconOff } from '../components/icons/filter-icon-off'
-import { TimelapseOutlineIcon } from '../components/icons/timelapse-outline-icon'
-import { CheckReadIcon } from '../components/icons/check-read-icon'
-import { ManageSearchIcon } from '../components/icons/manage-search-icon'
 
 export const useIconsList = ({ filterText, height, width }: { filterText: string; height: number; width: number }) => {
     const icons = [
@@ -1151,6 +1153,18 @@ export const useIconsList = ({ filterText, height, width }: { filterText: string
             component: <DrawIcon height={height} width={width} />,
             clipboardText: '<DrawIcon />',
             tags: ['draw icon'],
+        },
+        {
+            name: 'IndeterminateIcon',
+            component: <IndeterminateIcon height={height} width={width} />,
+            clipboardText: '<IndeterminateIcon />',
+            tags: ['indeterminate icon'],
+        },
+        {
+            name: 'ArrowShrinkIcon',
+            component: <ArrowShrinkIcon height={height} width={width} />,
+            clipboardText: '<ArrowShrinkIcon />',
+            tags: ['arrow shrink icon'],
         },
     ]
 
